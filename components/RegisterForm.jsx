@@ -127,7 +127,12 @@ export default function RegisterForm() {
             </button>
           </div>
 
-          {error && <p className="text-red-800"> {error}</p>}
+          {error && (
+            <span className="text-white bg-red-900 px-6 py-1 text-sm rounded-lg">
+              {" "}
+              {error}
+            </span>
+          )}
         </form>
       </div>
     </div>

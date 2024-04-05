@@ -79,14 +79,19 @@ export default function LoginForm() {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-2 rounded focus:outline-none focus:shadow-outline"
               onClick={handleLogin}
             >
               Sign In
             </button>
           </div>
 
-          {error && <p className="text-red-800"> {error}</p>}
+          {error && (
+            <span className="text-white bg-red-900 px-6 py-1 text-sm rounded-lg">
+              {" "}
+              {error}
+            </span>
+          )}
         </form>
       </div>
     </div>
